@@ -1,0 +1,5 @@
+# Dotfiles
+
+- zsh
+- git
+- nvim
