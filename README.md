@@ -3,3 +3,5 @@
 - zsh
 - git
 - nvim
+- tmux
+- starship
