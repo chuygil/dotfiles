@@ -3,5 +3,5 @@
 - zsh
 - git
 - nvim
-- tmux
+- ghostty
 - starship

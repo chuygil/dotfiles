@@ -5,33 +5,16 @@ alias vim="nvim"
 alias zz="nvim $HOME/.zshrc"
 alias zs="source $HOME/.zshrc"
 alias nn="nvim $HOME/.config/nvim/"
-alias todo="nvim $HOME/Workspaces/notes/todo.md"
-
+alias gg="nvim $HOME/.config/ghostty/config"
+alias todo="nvim $HOME/workspaces/notes/todo.md"
 alias ls="ls -al --color=auto"
-
-# tmux
-TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
-
-alias                                 \
-  tn="tmux -u -f $TMUX_CONFIG new"    \
-  ta="tmux -u -f $TMUX_CONFIG attach" \
-  tt="nvim $TMUX_CONFIG"
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(starship init zsh)"
 eval "$(zellij setup --generate-auto-start zsh)"
-
-# pnpm
-export PNPM_HOME="/Users/jgr/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
